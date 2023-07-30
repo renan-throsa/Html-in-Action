@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=PT+Serif&display=swap');
+
+:root {
+    box-sizing: border-box;
+    font-size: 1em;
+    --default-margin: 1.5em;
+    --default-bg-color: #eeeeee;
+    --default-bd-color: #cccccc;
+    --default-pm-color: #ff3d50;
+    --default-sc-color: #ffffff;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--default-bg-color);
+    font-family: 'Oswald', sans-serif;
+}
+
+body *+* {
+    margin-top: var(--default-margin);
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    color: #476b85;
+}
+
+
+.tile {
+    padding: 1.5em;
+    border-radius: .2em;
+    background-color: var(--default-sc-color);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.input-group {
+    margin-top: 0;
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+input {
+    padding: 8px;
+}
+
+select {
+    padding: 8px;
+    width: 181px
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid var(--default-bg-color);
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    text-align: start;
+}
+
+tr:nth-child(even) {
+    background-color: var(--default-bg-color);
+}
+
+form.invalid input:invalid,
+form.invalid select:invalid{
+    background-color: #FFD4D4;
+    border: 1px solid maroon;
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <title>Form Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>My Site Name</h1>
+        </header>
+        <main>
+            <section>
+                <form class="tile" name="order" method="post" action="/submit">
+                    <h1>Order Form</h1>
+                    <fieldset>
+                        <legend>Contact Details</legend>
+
+                        <div class="row">
+                            <div class="input-group">
+                                <label for="nameInput"> Full Name </label>
+                                <input id="nameInput" name="name" required autofocus setCustomValidity>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="emailInput">Email Address </label>
+                                <input id="emailInput" type="email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-group">
+                                <label for="inputAdress1"> Postal Address </label>
+                                <input id="inputAdress1" name="address1" placeholder="Address Line 1" required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="inputHomephone">Home Phone No.</label>
+                                <input id="inputHomephone" type="tel" name="homephone" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-group">
+                                <div>&nbsp;</div>
+                                <input name="address2" placeholder="Address Line 2">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="inputCellphone">Cell Phone No.</label>
+                                <input id="inputCellphone" type="tel" name="cellphone">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-group">
+                                <div>&nbsp;</div>
+                                <input name="zip" class="zip" placeholder="Zip Code">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="LinkedInSkype">LinkedIn Name</label>
+                                <input id="LinkedInSkype" type="text" name="linkedIn">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-group">
+                                <div>&nbsp;</div>
+                                <select name="country">
+                                    <option value="0">Country</option>
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="MX">México</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="inputTwitter">Twitter</label>
+                                <span class="twitter_prefix">@<input id="inputTwitter" type="text"
+                                        name="twitter"></span>
+
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+                    <fieldset>
+                        <legend>Login Details</legend>
+
+                        <div class="row">
+                            <div class="input-group">
+                                <label for="passwordInput"> Password </label>
+                                <input id="passwordInput" type="password" name="password" required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="cpasswordInput">Confirm Password </label>
+                                <input id="cpasswordInput" type="password" name="confirm_password" required>
+                            </div>
+                        </div>
+
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Order Details</legend>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Product Code</th>
+                                    <th>Description</th>
+                                    <th>Qty</th>
+                                    <th>Price</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        COMP001
+                                        <input type="hidden" name="product_code" value="COMP001">
+
+                                    </td>
+                                    <td>The Ultimate Smartphone</td>
+                                    <td>
+                                        <input type="number" data-price="399.99" name="quantity" value="1" min="1"
+                                            max="99" maxlength="2">
+                                    </td>
+                                    <td>$399.99</td>
+                                    <td>
+                                        <output name="item_total" class="item_total">$0.00</output>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        COMP002
+                                        <input type="hidden" name="product_code" value="COMP002">
+                                    </td>
+                                    <td>The Ultimate Tablet</td>
+                                    <td>
+                                        <input type="number" data-price="499.99" name="quantity" value="1" min="1"
+                                            max="99" maxlength="2">
+                                    </td>
+                                    <td>$499.99</td>
+                                    <td>
+                                        <output name="item_total" class="item_total">$0.00</output>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        COMP003
+                                        <input type="hidden" name="product_code" value="COMP003">
+                                    </td>
+                                    <td>The Ultimate Netbook</td>
+                                    <td>
+                                        <input type="number" data-price="299.99" name="quantity" value="1" min="1"
+                                            max="99" maxlength="2">
+                                    </td>
+                                    <td>$299.99</td>
+                                    <td>
+                                        <output name="item_total" class="item_total">$0.00</output>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        COMP004
+                                        <input type="hidden" name="product_code" value="COMP003">
+                                    </td>
+                                    <td>The Ultimate KeyBoad + HeadFone pack</td>
+                                    <td>
+                                        <input type="number" data-price="299.99" name="quantity" value="1" min="1"
+                                            max="99" maxlength="2">
+                                    </td>
+                                    <td>$299.99</td>
+                                    <td>
+                                        <output name="item_total" class="item_total">$0.00</output>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="4">Order Total</td>
+                                    <td>
+                                        <output name="order_total" id="order_total">$0.00</output>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Payment Details</legend>
+
+                        <div class="row">
+                            <div class="input-group">
+                                <label for="cardNameImput"> Name on Card</label>
+                                <input id="cardNameImput" name="card_name" required maxlength="20">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="cardNumberImput">Credit Card No.</label>
+                                <input id="cardNumberImput" name="card_number" pattern="[0-9]{13,16}" maxlength="16"
+                                    required title="13-16 digits, no spaces">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-group">
+                                <label for="cardExpiryImput">Expiry Date</label>
+                                <input id="cardExpiryImput" type="month" name="card_expiry" maxlength="7"
+                                    placeholder="YYYY-MM" required >
+                            </div>
+
+                            <div class="input-group">
+                                <label for="cardCvvImput">CVV2 No. at back of card</label>
+                                <input id="cardCvvImput" name="card_cvv2" class="cvv" maxlength="3" pattern="[0-9]{3}"
+                                    required title="exactly 3 digits">
+                            </div>
+                        </div>
+
+                    </fieldset>
+                    <div class="buttons">
+                        <input type="submit" value="Submit Order">
+                        <input type="submit" id="saveOrder" value="Save Order" formnovalidate formaction="/save">
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <ul><!-- Footer Links --></ul>
+            <!-- Copyright info -->
+        </footer>
+    </div>
+</body>
+
+</html>
