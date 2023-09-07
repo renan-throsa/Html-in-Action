@@ -1,13 +1,12 @@
 class SuperEditor {
 
-    constructor() {
-        this.createForm = document.forms.create
-        this.importForm = document.forms.import
-
-        this.view, this.fileName, this.isDirty = false;
-        this.unsavedMsg = 'Unsaved changes will be lost. Are you sure?',
-            this.unsavedTitle = 'Discard changes';
-    }
+    createForm = document.forms.create
+    importForm = document.forms.import
+    view = false
+    fileName = false;
+    isDirty = false;
+    unsavedMsg = 'Unsaved changes will be lost. Are you sure?';
+    unsavedTitle = 'Discard changes';
 
     markDirty() {
         this.isDirty = true;

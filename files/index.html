@@ -39,7 +39,7 @@
                         </form>
                     </div>
 
-                    <div class="details__footer">
+                    <div class="details__note">
                         <strong>Note</strong>: You can drag files from your computer and
                         drop them anywhere in this box to import them into the application.
                     </div>
@@ -47,13 +47,16 @@
 
                 <details open>
                     <summary>My Files</summary>
+                    <div class="details__note">
+                        You currently have <span id="file_count">0</span> file(s):
+                    </div>
 
                     <div class="details__content">
-                        You currently have <span id="file_count">0</span> file(s):
+
                         <ul id="files"></ul>
                     </div>
 
-                    <div class="details__footer">
+                    <div class="details__note">
                         <strong>Note</strong>: You can drag any of the files in the list
                         above to your computer to export them from the application.
                     </div>
@@ -61,9 +64,13 @@
 
             </section>
 
-            <section class="tile" id="editor">
-                <h1>Editing <span id="file_name"></span><a href="#list">Back to File
-                        Browser</a></h1>
+            <section id="editor">
+
+                <h1>Editing
+                    <span id="file_name"></span>
+                    <a href="#list">Back to File Browser</a>
+                </h1>
+
                 <div class="mode-toolbar">
                     <div class="left">
                         <div>Edit Mode:</div>
@@ -71,10 +78,11 @@
                         <button id="edit_html" class="split_right">HTML</button>
                     </div>
                     <div class="right">
-                        <button id="file_save" class="green">Save File</button>
-                        <button id="file_preview">Save &amp; Preview</button>
+                        <button id="file_save" class="button button--success">Save File</button>
+                        <button id="file_preview" class="button button--primary">Save &amp; Preview</button>
                     </div>
                 </div>
+
                 <details open>
                     <summary>File Contents</summary>
                     <div id="file_contents">
